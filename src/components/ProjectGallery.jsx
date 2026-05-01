@@ -40,30 +40,6 @@ const PROJECTS = [
     emoji: '🎨',
     featured: true,
   },
-  {
-    id: 'nosql',
-    title: 'AI NoSQL Database Engine',
-    category: 'Systems / Backend',
-    accent: 'amber',
-    summary: 'Custom mini AI-powered NoSQL database engine built from scratch in Node.js.',
-    description:
-      'A ground-up implementation of an AI-powered NoSQL database engine in Node.js, featuring a custom query language parser, indexing strategies, and an AI assistant for schema optimization suggestions.',
-    tags: ['Node.js', 'Systems Design', 'NoSQL', 'AI', 'Custom Engine'],
-    emoji: '🗄️',
-    featured: false,
-  },
-  {
-    id: 'satellite',
-    title: 'Satellite Tracking System',
-    category: 'Hardware + Software',
-    accent: 'cyan',
-    summary: 'Hardware-software practicum to track live satellites using a dish antenna.',
-    description:
-      'A hybrid hardware/software system that interfaces with a dish antenna to track real-time satellite positions. Processes TLE data, calculates azimuth/elevation, and drives servo motors for autonomous tracking.',
-    tags: ['Python', 'TLE Data', 'Hardware', 'Servo Control', 'Real-Time'],
-    emoji: '🛰️',
-    featured: false,
-  },
 ];
 
 const cardVariants = {
@@ -124,7 +100,7 @@ function ProjectCard({ project, index }) {
 export default function ProjectGallery() {
   const [filter, setFilter] = useState('All');
   const [ref, inView] = useInView({ threshold: 0.05 });
-  const filters = ['All', 'AI / Full-Stack', 'Full-Stack / MERN', 'Systems / Backend', 'Hardware + Software'];
+  const filters = ['All', 'AI / Full-Stack', 'Full-Stack / MERN'];
 
   const visible = filter === 'All'
     ? PROJECTS
