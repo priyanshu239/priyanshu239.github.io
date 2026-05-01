@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import '../styles/Navbar.css';
+import logo from '../assets/logo.png';
 
 const links = [
   { label: 'About',      href: '#about' },
@@ -21,7 +22,7 @@ export default function Navbar() {
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <a href="#hero" className="navbar-logo" aria-label="Home">
-        <span className="logo-bracket">&lt;</span>PK<span className="logo-bracket">/&gt;</span>
+        <img src={logo} alt="Logo" className="navbar-logo-img" />
       </a>
 
       <ul className={`navbar-links ${menuOpen ? 'open' : ''}`}>
@@ -32,7 +33,7 @@ export default function Navbar() {
         ))}
         <li>
           <a
-            href="/resume.pdf"
+            href="https://drive.google.com/file/d/1DysWIx2L4wOeQKQHaeCprRQtfvlUNXpv/view?usp=drive_link"
             target="_blank"
             rel="noreferrer"
             className="nav-resume-btn"

@@ -89,7 +89,7 @@ export default function Hero() {
             </svg>
           </a>
           <a
-            href="/resume.pdf"
+            href="https://drive.google.com/file/d/1DysWIx2L4wOeQKQHaeCprRQtfvlUNXpv/view?usp=drive_link"
             target="_blank"
             rel="noreferrer"
             className="btn-secondary"

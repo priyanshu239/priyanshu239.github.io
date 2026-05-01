@@ -92,13 +92,12 @@ const BENTO_ITEMS = [
     title: 'Beyond Code',
     size: 'wide',
     accent: 'violet',
-    icon: '🏸',
+    icon: '🏏',
     content: (
       <>
         <p className="bento-sub" style={{ fontSize: '1rem', lineHeight: 1.7 }}>
-          Passionate competitive badminton player &amp; proud member of the{' '}
-          <strong style={{ color: 'var(--accent-violet)' }}>ONE v ONE</strong> squad.
-          Bringing the same precision and strategy from the court to my code.
+          When I'm not coding, you'll find me on the <strong style={{ color: 'var(--accent-violet)' }}>cricket</strong> field or pushing my limits at the <strong style={{ color: 'var(--accent-violet)' }}>gym</strong>.
+          I believe in staying physically sharp to maintain peak mental performance in my engineering work.
         </p>
       </>
     ),

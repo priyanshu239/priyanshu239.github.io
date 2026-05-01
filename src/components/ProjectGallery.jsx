@@ -15,6 +15,7 @@ const PROJECTS = [
     tags: ['LangGraph', 'Groq Llama 4', 'FastAPI', 'React', 'Streaming', 'Python'],
     emoji: '🏥',
     featured: true,
+    githubLink: 'https://github.com/priyanshu239/medai-main',
   },
   {
     id: 'appointy',
@@ -27,6 +28,7 @@ const PROJECTS = [
     tags: ['MongoDB', 'Express', 'React', 'Node.js', 'Razorpay', 'JWT'],
     emoji: '📅',
     featured: true,
+    liveLink: 'https://appointy-roan.vercel.app/',
   },
   {
     id: 'pixgen',
@@ -39,6 +41,7 @@ const PROJECTS = [
     tags: ['OpenAI DALL·E', 'React', 'Node.js', 'Request Queue', 'REST API'],
     emoji: '🎨',
     featured: true,
+    liveLink: 'https://pix-gen-6gya.vercel.app/',
   },
 ];
 
@@ -90,6 +93,30 @@ function ProjectCard({ project, index }) {
             {project.tags.map(t => (
               <span key={t} className={`pc-tag tag-${project.accent}`}>{t}</span>
             ))}
+          </div>
+          <div className="pcb-actions">
+            {project.liveLink && (
+              <a
+                href={project.liveLink}
+                target="_blank"
+                rel="noreferrer"
+                className={`pcb-link link-${project.accent}`}
+                onClick={(e) => e.stopPropagation()}
+              >
+                Live ↗
+              </a>
+            )}
+            {project.githubLink && (
+              <a
+                href={project.githubLink}
+                target="_blank"
+                rel="noreferrer"
+                className={`pcb-link pcb-github link-${project.accent}`}
+                onClick={(e) => e.stopPropagation()}
+              >
+                GitHub ↗
+              </a>
+            )}
           </div>
         </div>
       </div>

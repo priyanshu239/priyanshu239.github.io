@@ -152,6 +152,44 @@
 .pc-tag.tag-amber   { background: rgba(251,191,36,0.1); color: var(--accent-amber); border: 1px solid rgba(251,191,36,0.15); }
 .pc-tag.tag-more    { background: rgba(255,255,255,0.05); color: var(--text-muted); border: 1px solid var(--border); }
 
+.pcb-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.pcb-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+  width: fit-content;
+}
+
+.pcb-github {
+  background: transparent !important;
+  border: 1px solid var(--border);
+  color: var(--text-primary) !important;
+  box-shadow: none !important;
+}
+.pcb-github:hover {
+  background: rgba(255,255,255,0.05) !important;
+  border-color: var(--text-secondary);
+}
+
+.pcb-link:hover {
+  transform: translateY(-2px);
+}
+
+.link-emerald { background: var(--accent-emerald); color: #09090b; box-shadow: 0 0 16px rgba(99,252,196,0.2); }
+.link-cyan    { background: var(--accent-cyan);    color: #09090b; box-shadow: 0 0 16px rgba(34,211,238,0.2); }
+.link-violet  { background: var(--accent-violet);  color: #09090b; box-shadow: 0 0 16px rgba(167,139,250,0.2); }
+
 .hover-hint {
   font-size: 0.72rem;
   color: var(--text-muted);

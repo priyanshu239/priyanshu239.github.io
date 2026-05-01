@@ -22,14 +22,15 @@
 }
 
 .navbar-logo {
-  font-family: var(--font-heading);
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: var(--text-primary);
+  display: flex;
+  align-items: center;
   text-decoration: none;
-  letter-spacing: -0.02em;
 }
-.logo-bracket { color: var(--accent-emerald); }
+.navbar-logo-img {
+  height: 38px;
+  width: auto;
+  object-fit: contain;
+}
 
 .navbar-links {
   display: flex;
