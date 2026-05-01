@@ -1,0 +1,133 @@
+/* ============================================================
+   GLOBAL STYLES — Priyanshu Kumar Portfolio
+   ============================================================ */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg-base:       #09090b;
+  --bg-card:       #111113;
+  --bg-card-hover: #18181b;
+  --border:        rgba(255,255,255,0.07);
+  --border-hover:  rgba(99,252,196,0.35);
+
+  --accent-emerald: #63fcc4;
+  --accent-cyan:    #22d3ee;
+  --accent-violet:  #a78bfa;
+  --accent-amber:   #fbbf24;
+
+  --text-primary:   #f4f4f5;
+  --text-secondary: #a1a1aa;
+  --text-muted:     #52525b;
+
+  --font-heading: 'Space Grotesk', sans-serif;
+  --font-body:    'Inter', sans-serif;
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --radius-xl: 32px;
+
+  --shadow-glow-emerald: 0 0 28px rgba(99,252,196,0.18);
+  --shadow-glow-violet:  0 0 28px rgba(167,139,250,0.18);
+  --shadow-glow-cyan:    0 0 28px rgba(34,211,238,0.18);
+}
+
+html {
+  scroll-behavior: smooth;
+  cursor: none;
+}
+
+body {
+  background-color: var(--bg-base);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* ─── Custom Scrollbar ─── */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--bg-base); }
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--accent-emerald), var(--accent-violet));
+  border-radius: 10px;
+}
+
+/* ─── Custom Cursor ─── */
+.cursor-dot,
+.cursor-ring {
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: difference;
+  transition: opacity 0.3s;
+}
+.cursor-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--accent-emerald);
+  transform: translate(-50%, -50%);
+}
+.cursor-ring {
+  width: 36px;
+  height: 36px;
+  border: 1.5px solid var(--accent-emerald);
+  transform: translate(-50%, -50%);
+  transition: width 0.2s, height 0.2s, border-color 0.2s;
+}
+.cursor-ring.hovered {
+  width: 60px;
+  height: 60px;
+  border-color: var(--accent-violet);
+}
+
+/* ─── Utility ─── */
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent-emerald);
+  margin-bottom: 14px;
+}
+.section-label::before {
+  content: '';
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--accent-emerald);
+  border-radius: 2px;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, var(--accent-emerald) 0%, var(--accent-cyan) 50%, var(--accent-violet) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.glow-border {
+  border: 1px solid var(--border);
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+.glow-border:hover {
+  border-color: var(--border-hover);
+  box-shadow: var(--shadow-glow-emerald);
+}
+
+/* ─── Selection ─── */
+::selection {
+  background: rgba(99,252,196,0.2);
+  color: var(--accent-emerald);
+}
